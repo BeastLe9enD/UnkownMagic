@@ -62,14 +62,7 @@ public class GetTransmRotation {
 		 
 		return 0;
 	}
-	public Block[] xPos = new Block[]{};
-	public Block[] zPos = new Block[]{};
 	
-	public Block[] yPos = new Block[]{};
 	
-	for(int x = 0; x < 16; x++)
-	{
-		
-	}
 	
 }
