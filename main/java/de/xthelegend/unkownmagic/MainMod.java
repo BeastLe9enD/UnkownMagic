@@ -1,6 +1,7 @@
 package de.xthelegend.unkownmagic;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -17,6 +18,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import de.xthelegend.unkownmagic.common.blocks.BlockMagnetizationPumpkin;
 import de.xthelegend.unkownmagic.common.items.ItemEssenceSeed;
 import de.xthelegend.unkownmagic.common.items.ItemTransmutationCrystal;
 import de.xthelegend.unkownmagic.proxy.CommonProxy;
@@ -49,6 +51,8 @@ public class MainMod {
 	
 	public static Item essenceSeeds = new ItemEssenceSeed(BlockEssenceCrop,Blocks.farmland);
 	
+	public static Block magnetizationPumpkin = new BlockMagnetizationPumpkin(Material.gourd, "essencekin", 1.0F);
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -66,6 +70,8 @@ public class MainMod {
 		
 		GameRegistry.registerBlock(BlockEssenceCrop,BlockEssenceCrop.getUnlocalizedName());
 		GameRegistry.registerItem(essenceSeeds,essenceSeeds.getUnlocalizedName());
+		
+		GameRegistry.registerBlock(magnetizationPumpkin,magnetizationPumpkin.getUnlocalizedName());
 	}
 	
 	@EventHandler
